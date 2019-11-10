@@ -1,0 +1,20 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  creationTimestamp: null
+  name: production
+spec:
+  kind: Permanent
+  label: Production
+  namespace: gke-test-production
+  order: 200
+  previewGitInfo:
+    user: {}
+  promotionStrategy: Manual
+  source:
+    url: https://github.com/jx-bot-demo/environment-jx-gke2-production.git
+  teamSettings:
+    defaultScheduler:
+      kind: ""
+      name: ""
+status: {}
